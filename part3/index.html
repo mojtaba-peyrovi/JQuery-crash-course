@@ -1,0 +1,122 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Part3 | DOM Manipulation</title>
+        <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+        <style media="screen">
+            body{
+                font-size: 17px;
+                font-family: arial;
+                background: #bfbfbf;
+                line-height: 1.5em;
+            }
+            header{
+                background: #333;
+                color:#fff;
+                padding-left: 20px;
+                text-align: center;
+                border-bottom: 4px #000 solid;
+                margin-bottom: 10px;
+            }
+            #container{
+                width: 90%;
+                margin:auto;
+                padding: 10px;
+            }
+            .myClass{
+                color:blue;
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Jquery Crash Course</h1>
+        </header>
+
+        <div id="container">
+            <button type="button" name="button" id="btn-1">Button One</button>
+            <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eos consequatur repudiandae velit modi repellat rerum quam voluptatem, reiciendis ipsum?</p>
+            <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eos consequatur repudiandae velit modi repellat rerum quam voluptatem, reiciendis ipsum?</p>
+            <div id="myDiv"></div>
+
+            <input type="text" name="" value="" id="newItem">
+            <ul id="list">
+                <li>list item 1</li>
+                <li>list item 2</li>
+                <li>list item 3</li>
+                <li>list item 4</li>
+                <li>list item 5</li>
+                <li>list item 6</li>
+            </ul>
+
+            <a href="http://google.com">Google</a>
+            <ul id="users">
+
+            </ul>
+
+        </div>
+
+    <script>
+    $(document).ready(function(){
+        /*$('.para1').css('color','red');
+
+        $('.para1').css({
+            color: 'red',
+            background: 'green'
+        });
+        //$('.para2').addClass('myClass');
+        //$('.para2').removeClass('myClass');
+        //$('#btn-1').click(function(){
+            //$('.para2').toggleClass('myClass');
+        //});
+
+        //$('#myDiv').text('Hello world');
+        //$('#myDiv').html('<h1>Hello world</h1>');
+        //alert($('#myDiv').text());
+        $('#btn-1').click(function(){
+            //$('ul').append('<li>Append list item</li>');
+            //$('ul').prepend('<li>Append list item</li>');
+            //$('.para1').appendTo('#myDiv');
+            //$('.para1').prependTo('#myDiv');
+            // $('ul').before('<h4>hi world</h4>');
+            // $('ul').after('<h4>hi world</h4>');
+            // $('ul li:first').empty();
+             //$('ul li:last').detach();
+        //});
+        // $('a').attr('target','_blank');
+        // alert($('a').attr('href'));
+        // $('a').removeAttr('target'); */
+
+        //$('p').wrap('<h1>');
+        //$('p').wrapAll('<h3>');
+        /*$('#newItem').keyup(function(e){
+            var code = e.which;
+            if(code == 13){
+                e.preventDefault();
+                $('ul').append('<li>'+e.target.value+'</li>');
+                $('#newItem').val('');
+            }
+        }); */
+        /*var myArr = [
+            'moji',
+            'Anna',
+            'Ava',
+            'Roman'
+        ];
+
+        $.each(myArr,function(f, val){
+            $('#users').append('<li>'+val+'</li>');
+        }); */
+        var newArr = $('#list').toArray();
+        $.each(newArr,function(f, val){
+            console.log(val.innerHTML);
+        });
+    });
+    </script>
+    </body>
+</html>
